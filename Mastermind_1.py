@@ -13,7 +13,6 @@ def convert(int_1):
 	return(list_1)
 
 
-
 import random
 
 num_list = []
@@ -21,11 +20,11 @@ known_list = []
 
 for i in range (0, 4):
 	x = random.randint(0, 9)
-	y = str(x)
-	num_list.append(y)
+	num_list.append(x)
 	known_list.append("X ")
 
 game = True
+turn_count = 0
 
 while game == True:
 	
@@ -37,3 +36,21 @@ while game == True:
 	user_num = int(input_1)
 
 	user_num_list = convert(user_num)
+
+	counter = 0
+	for i in range (0, 4):
+		if num_list[i] == user_num_list[i]:
+			x = num_list[i]
+			string_1 = "%s " % x
+			counter = counter + 1
+		else:
+			toggle = True
+
+	print(known_list)
+	turn_count = turn_count + 1
+
+	if counter == 4:
+		game = False
+	else:
+		toggle = False
+
