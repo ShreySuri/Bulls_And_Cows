@@ -12,6 +12,11 @@ def convert(int_1):
 		int_1 = rem
 	return(list_1)
 
+def listToString(s)
+	str1 = "" 
+	for i in s:
+    	str1 += i 
+	return(str1)
 
 import random
 
@@ -42,6 +47,9 @@ while game == True:
 		if num_list[i] == user_num_list[i]:
 			x = num_list[i]
 			string_1 = "%s " % x
+			known_list.append(string_1)
+			print("")
+			print(listToString(known_list))
 			counter = counter + 1
 		else:
 			toggle = True
@@ -54,3 +62,5 @@ while game == True:
 	else:
 		toggle = False
 
+print("")
+print("You won! It took you %s guesses. " % turn_count)
