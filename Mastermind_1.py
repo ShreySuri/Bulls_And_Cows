@@ -12,7 +12,7 @@ def convert(int_1):
 		int_1 = rem
 	return(list_1)
 
-def listToString(s)
+def listToString(s):
 	str1 = "" 
 	for i in s:
     	str1 += i 
@@ -27,6 +27,8 @@ for i in range (0, 4):
 	x = random.randint(0, 9)
 	num_list.append(x)
 	known_list.append("X ")
+
+print(num_list)
 
 game = True
 turn_count = 0
@@ -47,9 +49,9 @@ while game == True:
 		if num_list[i] == user_num_list[i]:
 			x = num_list[i]
 			string_1 = "%s " % x
-			known_list.append(string_1)
+			known_list[i] = string_1
 			print("")
-			print(listToString(known_list))
+			known_string = "".join(known_list)
 			counter = counter + 1
 		else:
 			toggle = True
