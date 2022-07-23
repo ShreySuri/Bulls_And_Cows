@@ -15,7 +15,7 @@ def convert(int_1):
 def listToString(s):
     str1 = "" 
     for i in s:
-    	str1 += i
+        str1 += i 
     return(str1)
 
 import random
@@ -49,9 +49,10 @@ while game == True:
 		if num_list[i] == user_num_list[i]:
 			x = num_list[i]
 			string_1 = "%s " % x
-			known_list.append(string_1)
+			known_list[i] = string_1
 			print("")
-			print(listToString(known_list))
+			known_string = "".join(known_list)
+			print(known_string)
 			counter = counter + 1
 		else:
 			toggle = True
