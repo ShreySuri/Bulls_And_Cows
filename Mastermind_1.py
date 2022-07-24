@@ -21,12 +21,10 @@ def listToString(s):
 import random
 
 num_list = []
-known_list = []
 
 for i in range (0, 4):
 	x = random.randint(0, 9)
 	num_list.append(x)
-	known_list.append("X ")
 
 print(num_list)
 
@@ -44,7 +42,8 @@ while game == True:
 
 	user_num_list = convert(user_num)
 
-        cows = 0
+	cows = 0
+        bulls = 0
 
 	for i in range (0, 4):
                 for j in range (0, 4):
