@@ -1,5 +1,4 @@
-# Mastermind
+# Bulls and Cows
 
-Mastermind is a two-player code-breaking game. It resembles Bulls and Cows, an earlier pencil-and-paper game that dates back a century. 
-
-Wikipedia: https://en.wikipedia.org/wiki/Mastermind_(board_game) 
+Bulls and Cows is a two-player code-breaking game. It is the predeccesor to Mastermind.
+Wikipedia: https://en.wikipedia.org/wiki/Bulls_and_Cows
