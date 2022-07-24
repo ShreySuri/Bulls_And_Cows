@@ -42,7 +42,7 @@ while game == True:
 		input_1 = float(input_1)
 	user_num = int(input_1)
 
-	user_num_list = convert(user_num)
+        user_num_list = convert(user_num)
 
         cows = 0
 
