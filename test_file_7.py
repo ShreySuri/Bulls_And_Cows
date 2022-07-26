@@ -46,3 +46,22 @@ while game == True:
         bulls = 0
 
 	for i in range (0, 4):
+                for j in range (0, 4):
+                        if user_num_list[i] == num_list[j]:
+                                cows = cows + 1
+                        else:
+                                toggle = True
+
+        for k in range (0, 4):
+                if user_num_list[k] == num_list[k]:
+                        bulls = bulls + 1
+                else:
+                        bulls = bulls + 0
+
+        cows = cows - bulls
+
+        print("")
+        print("%s Bulls, %s Cows" % (bulls, cows))
+
+print("")
+print("You won! It took you %s guesses. " % turn_count)
