@@ -18,18 +18,37 @@ def listToString(s):
           str1 += i 
     return(str1)
 
+def repeat(list_1):
+    x = len(list_1) - 1
+    counter = 0
+    for i in range (0, x):
+          for j in range (i, x):
+              if list_1[i] == list_1[j + 1]:
+                   counter = counter + 1
+              else:
+                   counter = counter + 0
+    return(counter)
+               
+
 import random
 
-num_list = []
+num_list = [0, 0, 0, 0]
+repeat_count = repeat(num_list)
 
-for i in range (0, 4):
-     x = random.randint(0, 9)
+while repeat_count > 1:
+     x = random.randint(1, 9)
      num_list.append(x)
+     num_list.pop(0)
+     for i in range (0, 3):
+          x = random.randint(0, 9)
+          num_list.append(x)
+          num_list.pop(0)
+     repeat_count = repeat(num_list)
 
 print(num_list)
 
 game = True
-turn_count = 0
+turns = 0
 
 while game == True:
      
@@ -58,12 +77,14 @@ while game == True:
           else:
                 bulls = bulls + 0
 
-     cows = cows - bulls
+     cows = cows - bulls - repeat_count
 
      if bulls == 4:
           game = False
      else:
           toggle = False
+
+     turns = turns + 1
 
      print("")
      print("%s Bulls, %s Cows" % (bulls, cows))
