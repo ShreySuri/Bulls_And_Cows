@@ -20,20 +20,22 @@ def listToString(s):
 
 def repeat(list_1):
     x = len(list_1) - 1
-    counter = 0
+    trouble_list = []
     for i in range (0, x):
           for j in range (i, x):
               if list_1[i] == list_1[j + 1]:
-                   counter = counter + 1
+                   x = list_1[i]
+                   trouble_list.append(x)
               else:
-                   counter = counter + 0
-    return(counter)
+                   toggle_1 = True
+    return(trouble_list)
                
 
 import random
 
 num_list = [0, 0, 0, 0]
-repeat_count = repeat(num_list)
+repeat_list = repeat(num_list)
+repeat_count = len(repeat_list)
 
 while repeat_count > 1:
      for i in range (0, 4):
@@ -43,6 +45,8 @@ while repeat_count > 1:
      repeat_count = repeat(num_list)
 
 print(num_list)
+check_list = repeat(num_list)
+check_list_len = len(check_list)
 
 game = True
 turns = 0
@@ -83,7 +87,18 @@ while game == True:
           else:
                 bulls = bulls + 0
 
-     cows = cows - bulls - repeat_count
+     if check_list_len != 0:
+          for i in range (0, check_list_len):
+               for j in range (0, 4):
+                    if check_list[i] == user_num_list[j]:
+                         cows = cows - 0.5
+                    else:
+                         toggle = False
+     else:
+          toggle = True
+
+     cows = int(cows)
+     cows = cows - bulls
 
      if bulls == 4:
           game = False
