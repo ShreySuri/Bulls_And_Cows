@@ -36,10 +36,7 @@ num_list = [0, 0, 0, 0]
 repeat_count = repeat(num_list)
 
 while repeat_count > 1:
-     x = random.randint(1, 9)
-     num_list.append(x)
-     num_list.pop(0)
-     for i in range (0, 3):
+     for i in range (0, 4):
           x = random.randint(0, 9)
           num_list.append(x)
           num_list.pop(0)
@@ -55,11 +52,20 @@ while game == True:
      input_1 = 0
      while input_1 % 1 != 0 or input_1 < 1 or input_1 > 9999:
           print("")
-          input_1 = input(print("Enter a 4 digit  number. "))
+          input_1 = input(print("Enter an integer from 0 to 9999 inclusive. "))
           input_1 = float(input_1)
      user_num = int(input_1)
 
      user_num_list = convert(user_num)
+     length = len(user_num_list)
+     if length < 4:
+          length = 4 - length
+          user_num_list.reverse()
+          for i in range (0, length):
+               user_num_list.append(0)
+          user_num_list.reverse()
+     else:
+          toggle = False
 
      cows = 0
      bulls = 0
@@ -90,4 +96,4 @@ while game == True:
      print("%s Bulls, %s Cows" % (bulls, cows))
 
 print("")
-print("You won! It took you %s guesses. " % turn_count)
+print("You won! It took you %s guesses. " % turns)
