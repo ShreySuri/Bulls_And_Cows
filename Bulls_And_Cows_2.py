@@ -12,7 +12,7 @@ game = True
 
 while game == True:
     check = False
-    while check = False:
+    while check == False:
         print("")
         user_num = input(print("Enter a 4-digit code. If you would like some examples, type 'example'. "))
         if user_num == "example":
@@ -20,7 +20,7 @@ while game == True:
             for i in range (0, 10):
                 ex_list = []
                 for i in range (0, 4):
-                    x = random.randint(0, 9):
+                    x = random.randint(0, 9)
                     ex_list.append(x)
                 print(ex_list)
         else:
@@ -37,3 +37,5 @@ while game == True:
                 check = True
             else:
                 toggle = False
+
+    
