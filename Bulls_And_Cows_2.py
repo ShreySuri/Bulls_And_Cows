@@ -11,8 +11,8 @@ for i in range (0, 4):
 game = True
 
 while game == True:
-    user_num = 0.5
-    while user_num % 1 != 0 or user_num < 0 or user_num > 9999:
+    check = False
+    while check = False:
         print("")
         user_num = input(print("Enter a 4-digit code. If you would like some examples, type 'example'. "))
         if user_num == "example":
@@ -25,3 +25,15 @@ while game == True:
                 print(ex_list)
         else:
             user_list = list(user_num)
+            len_user_list = len(user_list)
+            counter = 0
+            for i in range (0, len_user_list):
+                for j in range (0, 10):
+                    if user_list[i] == j:
+                        counter = counter + 1
+                    else:
+                        toggle = True
+            if counter == 4 and len_user_list == 4:
+                check = True
+            else:
+                toggle = False
