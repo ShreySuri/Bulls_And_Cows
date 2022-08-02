@@ -24,15 +24,17 @@ while game == True:
     check = False
     while check == False:
         print("")
-        user_num = input(print("Enter a 4-digit code. If you would like some examples, type 'example'. "))
+        user_num = input(print("Enter a 4-digit **unique** code. If you would like some examples, type 'example'. "))
         if user_num == "example" or user_num == "EXAMPLE":
-            print("")
-            for i in range (0, 10):
-                ex_list = []
-                for i in range (0, 4):
-                    x = random.randint(0, 9)
-                    ex_list.append(x)
-                print(ex_list)
+            x = random.randint(0, 9999)
+            if x < 10:
+                print("000%s" % x)
+            elif x < 100:
+                print("00%s" % x)
+            elif x < 1000:
+                print("0%s" % x)
+            else:
+                print(x)
         else:
             user_list = list(user_num)
             len_user_list = len(user_list)
@@ -48,7 +50,9 @@ while game == True:
             else:
                 toggle = False
 
-        
+    for i in range (0, 4):
+        for j in range (0, 4):
+            if num_list[i] == user_list
         
 
     
