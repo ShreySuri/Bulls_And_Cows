@@ -26,7 +26,7 @@ while game == True:
         print("")
         user_num = input(print("Enter a 4-digit **unique** code. If you would like some examples, type 'example'. "))
         if user_num == "example" or user_num == "EXAMPLE":
-            x = random.randint(0, 9999)
+            while unique(x_list
             if x < 10:
                 print("000%s" % x)
             elif x < 100:
