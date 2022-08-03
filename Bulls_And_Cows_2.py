@@ -38,19 +38,7 @@ while game == True:
                     ex_str = "%s%s" % (ex_str, ex_list[j])
                 print(ex_str)
         else:
-            user_list = list(user_num)
-            len_user_list = len(user_list)
-            counter = 0
-            for i in range (0, len_user_list):
-                for j in range (0, 10):
-                    if user_list[i] == j:
-                        counter = counter + 1
-                    else:
-                        toggle = True
-            if counter == 4 and len_user_list == 4:
-                check = True
-            else:
-                toggle = False
+            
 
     for i in range (0, 4):
         for j in range (0, 4):
