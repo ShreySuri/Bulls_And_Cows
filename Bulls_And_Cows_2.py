@@ -14,8 +14,25 @@ def list_format(string):
     if len(list_2) == 1:
         list_2.reverse()
         for i in range (0, 3):
-            list
-    
+            list_2.append(0)
+        list_2.reverse()
+        return(list_2)
+    elif len(list_2) == 1:
+        list_2.reverse()
+        for i in range (0, 2):
+            list_2.append(0)
+        list_2.reverse()
+        return(list_2)
+    elif len(list_2) == 1:
+        list_2.reverse()
+        for i in range (0, 1):
+            list_2.append(0)
+        list_2.reverse()
+        return(list_2)
+    elif len(list_2) == 1:
+        return(list_2)
+    else:
+        return(None)
 
 import random
 
@@ -38,26 +55,9 @@ while game == True:
                 ex_list = [0, 0, 0, 0]
                 while unique(ex_list) == False:
                     x = random.randint(0, 9999)
-                    x = list_format
+                    ex_list = list_format(x)
         else:
-            user_list = list(user_num)
-            len_user_list = len(user_list)
-            total_val = []
-            counter = 0
-            for i in range (0, 10):
-                str_1 = str(i)
-                total_val.append(str_1)
-            for i in range (0, len_user_list):
-                for j in range (0, 10):
-                    if user_list[i] == total_val[j]:
-                        total_val[j] == "placeholder"
-                        counter = counter + 1
-                    else:
-                        toggle = False
-            if counter == 4 and len_user_list == 4:
-                check = True
-            else:
-                check = False
+            
 
 
     
