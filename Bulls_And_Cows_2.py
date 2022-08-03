@@ -8,15 +8,22 @@ def unique(list_1):
             else:
                 toggle_1 = True
     return(check)
-            
+
+def list_format(string):
+    list_2 = list(string)
+    if len(list_2) == 1:
+        list_2.reverse()
+        for i in range (0, 3):
+            list
+    
 
 import random
 
-num_list = [0, 0, 0, 0]
-while unique(num_list) == False:
-    x = random.randint(0, 9)
-    num_list.append(x)
-    num_list.pop(0)
+x = [0, 0, 0, 0]
+while unique(x) == False:
+    x = random.randint(0, 9999)
+    x = list_format(x)
+
 
 print(num_list)
 game = True
@@ -30,13 +37,8 @@ while game == True:
            for i in range (0, 10):
                 ex_list = [0, 0, 0, 0]
                 while unique(ex_list) == False:
-                    x = random.randint(0, 9)
-                    ex_list.append(x)
-                    ex_list.pop(0)
-                ex_str = ""
-                for j in range (0, 4):
-                    ex_str = "%s%s" % (ex_str, ex_list[j])
-                print(ex_str)
+                    x = random.randint(0, 9999)
+                    x = list_format
         else:
             user_list = list(user_num)
             len_user_list = len(user_list)
