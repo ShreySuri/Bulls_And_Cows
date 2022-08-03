@@ -38,7 +38,18 @@ while game == True:
                     ex_str = "%s%s" % (ex_str, ex_list[j])
                 print(ex_str)
         else:
-            
+            user_list = list(user_num)
+            total_val = []
+            for i in range (0, 10):
+                str_1 = str(i)
+                total_val.append(str_1)
+            for i in range (0, 4):
+                for j in range (0, 10):
+                    if user_list[i] == total_val[j]:
+                        total_val[j] == "placeholder"
+                        counter = counter + 1
+                    else:
+                        toggle = False
 
     for i in range (0, 4):
         for j in range (0, 4):
