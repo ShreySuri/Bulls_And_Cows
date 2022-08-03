@@ -18,6 +18,7 @@ while unique(num_list) == False:
     num_list.append(x)
     num_list.pop(0)
 
+print(num_list)
 game = True
 
 while game == True:
@@ -26,15 +27,16 @@ while game == True:
         print("")
         user_num = input(print("Enter a 4-digit **unique** code. If you would like some examples, type 'example'. "))
         if user_num == "example" or user_num == "EXAMPLE":
-            while unique(x_list
-            if x < 10:
-                print("000%s" % x)
-            elif x < 100:
-                print("00%s" % x)
-            elif x < 1000:
-                print("0%s" % x)
-            else:
-                print(x)
+           for i in range (0, 10):
+                ex_list = [0, 0, 0, 0]
+                while unique(ex_list) == False:
+                    x = random.randint(0, 9)
+                    ex_list.append(x)
+                    ex_list.pop(0)
+                ex_str = ""
+                for j in range (0, 4):
+                    ex_str = "%s%s" % (ex_str, ex_list[j])
+                print(ex_str)
         else:
             user_list = list(user_num)
             len_user_list = len(user_list)
