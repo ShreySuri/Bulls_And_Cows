@@ -39,21 +39,23 @@ while game == True:
                 print(ex_str)
         else:
             user_list = list(user_num)
+            len_user_list = len(user_list)
             total_val = []
+            counter = 0
             for i in range (0, 10):
                 str_1 = str(i)
                 total_val.append(str_1)
-            for i in range (0, 4):
+            for i in range (0, len_user_list):
                 for j in range (0, 10):
                     if user_list[i] == total_val[j]:
                         total_val[j] == "placeholder"
                         counter = counter + 1
                     else:
                         toggle = False
+            if counter == 4 and len_user_list == 4:
+                check = True
+            else:
+                check = False
 
-    for i in range (0, 4):
-        for j in range (0, 4):
-            if num_list[i] == user_list
-        
 
     
