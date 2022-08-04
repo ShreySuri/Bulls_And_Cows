@@ -32,7 +32,7 @@ def list_format(string):
     elif len(list_2) == 4:
         return(list_2)
     else:
-        return(None)
+        return(["error"])
 
 import random
 
@@ -64,12 +64,9 @@ while game == True:
                 print(str_1)
         else:
             user_list = list_format(user_num)
-            if user_list == None:
-                check = False
-            elif unique(user_list) == False:
-                check = False
-            else:
+            if len(user_list) == 4 and unique(user_list) == True:
                 check = True
-
+            else:
+                check = False
 
     
